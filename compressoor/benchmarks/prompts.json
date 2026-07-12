@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "prompts": [
+    {
+      "id": "react_rerender_bug",
+      "label": "Explain React re-render bug",
+      "category": "code",
+      "prompt": "Explain why a React component re-renders when an inline object prop is recreated on every render. Keep technical terms exact. Show the fix with useMemo and mention shallow comparison."
+    },
+    {
+      "id": "auth_expiry_fix",
+      "label": "Fix auth middleware token expiry",
+      "category": "code",
+      "prompt": "Fix auth middleware token expiry bug. Do not change the API contract. Keep the current error message exactly the same. The likely bug is that token expiry uses < instead of <=. Update tests around the boundary case and do not introduce a database migration."
+    },
+    {
+      "id": "postgres_pool_setup",
+      "label": "Set up PostgreSQL connection pool",
+      "category": "ops",
+      "prompt": "Set up a PostgreSQL connection pool for a service. Keep environment variable names exactly the same. Do not change the health check path `/healthz`. Verify staging before production deploy. Risk: older workers still expect `DATABASE_URL`."
+    },
+    {
+      "id": "git_rebase_merge",
+      "label": "Explain git rebase vs merge",
+      "category": "repo",
+      "prompt": "Explain git rebase vs merge for a backend repository. Prefer rg for search. Avoid destructive git commands unless explicitly requested. Preserve the existing API response shape in backend refactors."
+    },
+    {
+      "id": "security_review",
+      "label": "Review PR for security issues",
+      "category": "review",
+      "prompt": "Findings: src/auth/session.ts may leak stale auth state after partial invalidation. Keep the external API unchanged. Add a regression test for concurrent invalidation. Risk: admin dashboards currently rely on the old session-miss metric shape."
+    },
+    {
+      "id": "callback_async_await",
+      "label": "Refactor callback to async/await",
+      "category": "code",
+      "prompt": "Refactor a callback-based data fetch helper to async/await. Keep behavior unchanged. Preserve exact error handling semantics. Add tests for timeout and partial failure handling."
+    },
+    {
+      "id": "microservices_vs_monolith",
+      "label": "Architecture: microservices vs monolith",
+      "category": "code",
+      "prompt": "Explain microservices vs monolith tradeoffs for a backend team. Keep the comparison concise but technically precise. Mention deployment complexity, team autonomy, debugging complexity, and operational overhead."
+    },
+    {
+      "id": "docker_multi_stage",
+      "label": "Docker multi-stage build",
+      "category": "ops",
+      "prompt": "Explain a Docker multi-stage build for a Node service. Keep commands exact where relevant. Mention build stage, runtime stage, smaller image size, and dependency isolation."
+    },
+    {
+      "id": "postgres_race_condition",
+      "label": "Debug PostgreSQL race condition",
+      "category": "debug",
+      "prompt": "Current status: PostgreSQL race-condition investigation is in src/db/lock.ts. Repro still exists under concurrent writes only. Unit tests pass; integration tests not run yet. Do not change transaction semantics. Next steps: capture one failing trace, run integration tests, then compare lock ordering."
+    },
+    {
+      "id": "react_error_boundary",
+      "label": "Implement React error boundary",
+      "category": "frontend",
+      "prompt": "Implement a React error boundary for a dashboard page. Keep public props unchanged. Preserve the existing design system. Add a smoke test for fallback rendering and a regression test for reset behavior."
+    },
+    {
+      "id": "node_retry_helper",
+      "label": "Refactor payments retry helper",
+      "category": "code",
+      "prompt": "Refactor the payments client to isolate retry logic into a single helper. Keep public method names unchanged. Keep the current 429 error message unchanged. Add unit coverage for timeout and 429 retry behavior."
+    },
+    {
+      "id": "frontend_nav_guardrails",
+      "label": "Update navigation layout guardrails",
+      "category": "frontend",
+      "prompt": "Update the navigation layout in src/ui/nav/layout.tsx. Preserve the existing design system. Keep keyboard navigation behavior unchanged. Add a smoke test for the compact mobile drawer state."
+    },
+    {
+      "id": "csv_parser_handoff",
+      "label": "CSV parser handoff",
+      "category": "debug",
+      "prompt": "Current status: CSV parser patch is in src/parser/csv.ts. Repro still exists on one legacy fixture only. Unit tests pass; integration tests not run yet. Do not change CSV output shape. Next steps: capture the failing fixture, run integration tests, then compare delimiter normalization."
+    },
+    {
+      "id": "cache_invalidation_review",
+      "label": "Cache invalidation review",
+      "category": "review",
+      "prompt": "Findings: src/cache/session_store.ts may retain stale session entries after partial invalidation. Keep the external API unchanged. Add a regression test for concurrent invalidation. Risk: admin dashboards currently rely on the old cache-miss metric shape."
+    },
+    {
+      "id": "bun_repo_rules",
+      "label": "Bun repo rules",
+      "category": "repo",
+      "prompt": "This repository uses Bun for scripts, not npm. Prefer rg for search. Avoid destructive git commands unless explicitly requested. Preserve the existing API response shape in backend refactors."
+    }
+  ]
+}

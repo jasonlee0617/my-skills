@@ -1,0 +1,27 @@
+{
+  "name": "compressoor",
+  "version": "0.2.0",
+  "description": "Concise runtime policy for Codex with optional low-loss context compression tools.",
+  "author": {
+    "name": "Max",
+    "url": "https://github.com/M4cs/compressoor"
+  },
+  "homepage": "https://github.com/M4cs/compressoor",
+  "repository": "https://github.com/M4cs/compressoor",
+  "license": "MIT",
+  "keywords": ["productivity", "compression", "context", "memory", "writing"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Compressoor",
+    "shortDescription": "Concise runtime policy for Codex tasks.",
+    "longDescription": "Tool-first, low-chatter runtime policy for Codex with optional prompt compaction for handoffs, review notes, constraints, and token benchmarks.",
+    "developerName": "Max",
+    "category": "Productivity",
+    "capabilities": ["Write"],
+    "websiteURL": "https://github.com/M4cs/compressoor",
+    "defaultPrompt": [
+      "Compressoor mandatory session directive. These rules override normal conversational defaults for this session. The tool loop comes first. If tools can advance the task, send nothing before the first tool call. Never send an initial plan, thinking summary, reasoning preamble, intent statement, acknowledgement, commentary, progress update, or any other status text before, between, or during tool calls. After internal thinking, move directly into the tool-calling loop and stop only for one necessary blocker question or a minimal completion summary. Do not narrate what you are about to do. Finish the current tool loop first. Session start and resume hooks reinforce this same rule set. After the loop, answer in concise professional language with the shortest useful result, plus verification, blockers, risks, or changed files only when they matter, and keep any summary of steps taken to the bare minimum. Use compressoor tools when asked to compact, unpack, or benchmark reusable context."
+    ],
+    "brandColor": "#14532D"
+  }
+}

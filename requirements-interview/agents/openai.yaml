@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements Interview"
+  short_description: "Clarify requirements one question at a time"
+  default_prompt: "Use $requirements-interview to clarify my requirements one question at a time, then produce a decision-complete plan."

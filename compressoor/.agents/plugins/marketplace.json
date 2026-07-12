@@ -1,0 +1,20 @@
+{
+  "name": "compressoor-repo",
+  "interface": {
+    "displayName": "Compressoor Repo"
+  },
+  "plugins": [
+    {
+      "name": "compressoor",
+      "source": {
+        "source": "local",
+        "path": "./plugins/compressoor"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

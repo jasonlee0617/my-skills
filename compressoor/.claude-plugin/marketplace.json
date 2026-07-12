@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "compressoor",
+  "description": "Concise runtime policy for Claude Code with optional durable-context compaction tools.",
+  "owner": {
+    "name": "Max",
+    "url": "https://github.com/M4cs/compressoor"
+  },
+  "plugins": [
+    {
+      "name": "compressoor",
+      "description": "Keep Claude Code concise and professional by default, with pack, unpack, and benchmark tools for reusable context.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

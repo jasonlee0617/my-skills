@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/JuliusBrussee/caveman",
+  "notes": "These are reference benchmark savings percentages reported in the Caveman README for output-token compression. They are not directly comparable to Compressoor's context-packing corpus, but they provide a public benchmark backdrop.",
+  "benchmarks": [
+    {"task": "Explain React re-render bug", "caveman_saved_pct": 87},
+    {"task": "Fix auth middleware token expiry", "caveman_saved_pct": 83},
+    {"task": "Set up PostgreSQL connection pool", "caveman_saved_pct": 84},
+    {"task": "Explain git rebase vs merge", "caveman_saved_pct": 58},
+    {"task": "Refactor callback to async/await", "caveman_saved_pct": 22},
+    {"task": "Architecture: microservices vs monolith", "caveman_saved_pct": 30},
+    {"task": "Review PR for security issues", "caveman_saved_pct": 41},
+    {"task": "Docker multi-stage build", "caveman_saved_pct": 72},
+    {"task": "Debug PostgreSQL race condition", "caveman_saved_pct": 81},
+    {"task": "Implement React error boundary", "caveman_saved_pct": 87}
+  ]
+}

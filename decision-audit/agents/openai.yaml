@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decision Audit"
+  short_description: "Expose blind spots, risks, and missed options"
+  default_prompt: "Use $decision-audit to audit this decision for blind spots, risks, overlooked information, stronger ideas, and communication improvements."
